@@ -43,7 +43,7 @@ const quotes = [
 /* function for random background-color */
 
 const getRandomColor = () => {
-  const randomColorNum = Math.floor(Math.random()*16777215).toString(16);
+  const randomColorNum = Math.floor(Math.random()*16777215).toString(16);            //   function taken from css-tricks.com 
   const randomColor = `#${randomColorNum}`;
   return randomColor;
 }
@@ -75,10 +75,10 @@ const printQuote = () => {
   }
   quoteHTML += '</p>';
   document.getElementById('quote-box').innerHTML = quoteHTML;
-  document.querySelector('body').style.backgroundColor = getRandomColor();
+  document.querySelector('body').style.backgroundColor = getRandomColor();         //  change body background with random color
 }
 
-setInterval(printQuote, 5000);
+setInterval(printQuote, 5000);                                      //    calls printQuote every 5 seconds
 
 
 /***
